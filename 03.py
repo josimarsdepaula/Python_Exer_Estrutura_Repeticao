@@ -1,16 +1,16 @@
 nome = input("Informe seu nome: ")
 while len(nome) <= 3:
-    print("Nome Inválido. Insira novamente acima de 3 caracteres.")
+    print("Nome Inválido. Insira novamente com mais de 3 caracteres.")
     nome = input("Informe seu nome: ")
 
 idade = int(input("Informe sua Idade: "))
 while idade < 0 or idade > 150:
-    print("Idade inválida. Insira novamente entre 0 e 150 anos.") 
+    print("Idade inválida. Insira novamente entre 0 e 150 anos.")
     idade = int(input("Informe sua Idade: "))
 
-salario = float(input("Informe seu sálario: "))
-while salario < 0:
-    print("salário inválido. Insira novamente.")
+salario = float(input("Informe seu salário: "))
+while salario <= 0:  # Considerando que salário zero também é inválido
+    print("Salário inválido. Insira novamente.")
     salario = float(input("Informe seu salário: "))
 
 sexo = input("Informe qual o seu sexo (F) - Feminino ou (M) - Masculino: ").strip().upper()
@@ -45,9 +45,3 @@ print(f"Sua idade é: {idade}")
 print(f"Seu salário é R${salario:.2f}")
 print(f"Seu Sexo é: {'Masculino' if sexo == 'M' else 'Feminino'}")
 print(f"Seu estado civil é: {estado_civil_descricao[estado_civil]}")
-
-
-
-
-
-
